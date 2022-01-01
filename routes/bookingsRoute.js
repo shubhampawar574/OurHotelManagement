@@ -2,7 +2,9 @@
 const express = require("express");
 const router = express.Router();
 const moment = require("moment");
-const stripe = require("stripe")(process.env.STRIPE_API_KEY);
+const stripe = require("stripe")(
+  "sk_test_51Jnz6kSEQNEQaCqbNA7QMo6PUC0oZzEUBwdu6eVGLni0ry989vp9Yvi0uo5omWfjVtwF6su8RbEX7G4jNQDsechA00mLAvZuX3"
+);
 const { v4: uuidv4 } = require("uuid");
 
 const Booking = require("../models/booking");
