@@ -1,6 +1,8 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const app = express();
+// Import the path module
+const path = require("path");
 
 dotenv.config({ path: "./config.env" });
 const dbConfig = require("./db");
