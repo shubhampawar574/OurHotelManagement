@@ -1,0 +1,13 @@
+.form-group{
+    padding-top: 2px;
+}
+.btn{
+    margin-top: 10px;
+    background-color: navy;
+}
+.signup{
+    box-shadow: black;
+}
+.error{
+    color: red;
+}

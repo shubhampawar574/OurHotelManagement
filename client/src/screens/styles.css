@@ -1,0 +1,44 @@
+.row-header {
+  margin: 0px auto;
+  padding: 0px 0px; }
+
+.row-content {
+  margin: 0px auto;
+  padding: 20px 0px;
+  border-bottom: 1px ridge;
+  min-height: 400px; }
+#login{
+    background-color: #575151;
+    width:100vw;
+    height: 100vh;
+}
+
+#nav{
+    display: flex;
+    justify-content: flex-end;
+    padding: 5%;
+    box-sizing: border-box;
+}
+
+.navitem{
+    margin: 3vh 2vw 0vw 0vw;
+}
+
+.containeritem{
+    margin: 0vh 0vw 3vw 0vh;
+}
+
+#heading{
+    color: #4A99D3;
+    text-decoration: underline;
+}
+
+.leftPara{
+ display: "inline";
+ width: 300px;
+}
+
+.leftCol{
+    display:"grid";
+    grid-template-columns: auto auto;
+}

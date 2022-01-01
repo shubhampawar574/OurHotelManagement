@@ -1,0 +1,8 @@
+.carousel{
+    height: 550px;
+}
+@media only screen and (max-width: 1024px) {
+    .carousel{
+      height: 300px;
+    }
+    }

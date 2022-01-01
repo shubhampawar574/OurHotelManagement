@@ -1,0 +1,17 @@
+.row{
+    display: flex;
+    justify-content: space-evenly;
+}
+.about-images {
+    height: 30vh;
+    width: 30vw;
+    margin: 10px 4px 4px 4px;
+    
+    box-shadow: 4px 4px 4px #301309;
+  }
+  
+  .about-container {
+    width: 80vw;
+    margin: auto;
+    justify-content: center;
+  }
