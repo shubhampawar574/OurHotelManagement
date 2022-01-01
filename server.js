@@ -20,6 +20,11 @@ app.use("/api/employees", employeesRoute);
 app.use("/api/meals", mealsRoute);
 app.use("/api/reviews", reviewsRoute);
 
+if (process.env.NODE_ENV === "production") {
+  // set static folder
+  app.use(express.static("client/build"));
+}
+
 const port = process.env.PORT || 5000;
 
 app.listen(port, () =>
