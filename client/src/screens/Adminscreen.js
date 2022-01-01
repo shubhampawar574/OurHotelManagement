@@ -12,7 +12,7 @@ const { TabPane } = Tabs;
 function Adminscreen() {
   useEffect(() => {
     if (!JSON.parse(localStorage.getItem("currentUser")).isAdmin) {
-      window.location.href = "/home";
+      window.location.href = "/booknow";
     }
   }, []);
   return (
@@ -302,7 +302,7 @@ export function AddRoom() {
         "Your Room added successfully",
         "success"
       ).then((result) => {
-        window.location.href = "/home";
+        window.location.href = "/admin";
       });
     } catch (error) {
       console.log(error);

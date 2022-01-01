@@ -123,7 +123,7 @@ const Bookingscreen = ({ match }) => {
                   amount={totalamount / 10}
                   currency="INR"
                   token={onToken}
-                  stripeKey={env.REACT_STRIPE_API_KEY}
+                  stripeKey={process.env.REACT_STRIPE_API_KEY}
                 >
                   <button className="btn btn-primary m-4">Pay Now</button>
                 </StripeCheckout>
