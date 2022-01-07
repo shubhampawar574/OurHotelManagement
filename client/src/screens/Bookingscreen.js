@@ -120,7 +120,7 @@ const Bookingscreen = ({ match }) => {
                   Pay Now
                 </button> */}
                 <StripeCheckout
-                  amount={totalamount / 10}
+                  amount={totalamount * 100}
                   currency="INR"
                   token={onToken}
                   stripeKey="pk_test_51Jnz6kSEQNEQaCqbFW9esGYzVNqa2VIeeTyVebV32R97bL0yLtaJV36xNQWTSk6S7EuXI2CvLozfmVntm6WFoFCW00gYnljkPL"

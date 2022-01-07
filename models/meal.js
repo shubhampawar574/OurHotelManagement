@@ -18,7 +18,10 @@ const mealSchema = mongoose.Schema(
       type: Number,
       required: true,
     },
-    imageurls: [],
+    mealImage: {
+      type: String,
+      required: true,
+    },
   },
   {
     timestamps: true,

@@ -1,0 +1,5 @@
+@media only screen and (max-width: 768px) {
+  .rooms {
+    margin-top: 4.5rem !important;
+  }
+}

@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">
-          ASSAN HOTELS
+          CONNAUGHT ROYAL HOTEL
         </a>
         <button
           class="navbar-toggler"

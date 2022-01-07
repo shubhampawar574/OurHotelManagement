@@ -34,12 +34,12 @@ const employeeSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    imageurl1: {
-      // data: Buffer,
-      // contentType: String,
-      type: String,
-      required: true,
-    },
+    // imageurl1: {
+    //   // data: Buffer,
+    //   // contentType: String,
+    //   type: String,
+    //   required: true,
+    // },
   },
   {
     timestamps: true,

@@ -33,25 +33,39 @@ const ContactUs = () => {
           <div class="col-12 col-sm-3 offset-sm-1">
             <h5>Our Address</h5>
             <address style={{ fontSize: "20px" }}>
-              121, Clear Water Bay Road
+              {/* 121, Clear Water Bay Road
               <br />
               Clear Water Bay, Kowloon
               <br />
               HONG KONG
+              <br /> */}
+              Connaught Royale, 106, Babar Rd, Fire Brigade Lane, Barakhamba,
+              New Delhi, Delhi 110001
               <br />
-              <i class="fa fa-phone"></i>: +852 1234 5678
+              <i class="fa fa-phone"></i>:+91 9111891115
               <br />
-              <i class="fa fa-fax"></i>: +852 8765 4321
-              <br />
-              <i class="fa fa-envelope"></i>:
-              <a href="mailto:confusion@hotel.net">confusion @hotel.net</a>
+              {/* <i class="fa fa-fax"></i>: +852 8765 4321
+              <br /> */}
+              {/* <i class="fa fa-envelope"></i>: */}
+              <a href="mailto:confusion@hotel.net">
+                http://www.connaughtroyale.com/
+              </a>
             </address>
           </div>
           <div class="col-12 col-sm-6 ">
             <h5>Map of our Location</h5>
-            <img src={img} style={{ width: "500px" }} />
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112100.58389723!2d77.10986588398681!3d28.595479159588315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd31c8743713%3A0xb10cec638186aebc!2sHotel%20Connaught%20Royale%2C%20Delhi!5e0!3m2!1sen!2sin!4v1641564622253!5m2!1sen!2sin"
+              width="600"
+              height="450"
+              style={{ border: "0" }}
+              allowfullscreen=""
+              loading="lazy"
+              title="delhihotel"
+            ></iframe>
+            {/* <img src={img} style={{ width: "500px" }} /> */}
           </div>
-          <div class="col-12 col-sm-4 offset-sm-1">
+          {/* <div class="col-12 col-sm-4 offset-sm-1">
             <div class="btn-group" role="group">
               <a role="button" class="btn btn-primary" href="tel:+85212345678">
                 <i class="fa fa-phone"></i> Call
@@ -68,10 +82,10 @@ const ContactUs = () => {
                 Email
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
 
-        <div class="row row-content">
+        {/* <div class="row row-content">
           <div class="col-12">
             <h3>Send us your Feedback</h3>
           </div>
@@ -167,7 +181,7 @@ const ContactUs = () => {
             </form>
           </div>
           <div class="col-12 col-md"></div>
-        </div>
+        </div> */}
       </div>
       <Footer />
     </div>

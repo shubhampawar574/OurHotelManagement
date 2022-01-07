@@ -8,11 +8,11 @@ function Footer() {
         <div class="row pb-2">
           <div class="col-lg-4 col-xs-12 about-company">
             <div style={{ fontSize: "30px", color: "yellowgreen" }}>
-              <u>ASSAN Hotel</u>
+              <u>Connaught Royal Hotel</u>
             </div>
             <p class="pr-5 text-white">
-              ASSAN Hotels Limited is India’s largest hotel chain in the
-              mid-priced hotel sector, and the third largest overall, on the
+              Connaught Royal Hotels Limited is India’s largest hotel chain in
+              the mid-priced hotel sector, and the third largest overall, on the
               basis of controlling interest in owned and leased rooms, as of
               June 30, 2021, according to the Horwath Report.{" "}
             </p>
@@ -46,13 +46,16 @@ function Footer() {
             >
               Location
             </div>
-            <p>22, Lorem ipsum dolor, consectetur adipiscing</p>
-            <p class="mb-0">
-              <i class="fa fa-phone mr-3"></i>(541) 754-3010
-            </p>
             <p>
-              <i class="fa fa-envelope-o mr-3"></i>info@hsdf.com
+              <br /> Connaught Royale, 106, Babar Rd, Fire Brigade Lane,
+              Barakhamba, New Delhi, Delhi 110001
             </p>
+            <p class="mb-0">
+              <i class="fa fa-phone mr-3"></i>+91 9111891115
+            </p>
+            {/* <p>
+              <i class="fa fa-envelope-o mr-3"></i>info@hsdf.com
+            </p> */}
           </div>
         </div>
         <div class="row">

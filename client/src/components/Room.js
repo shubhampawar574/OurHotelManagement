@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
+import img from "../resources/room.jfif";
+
 AOS.init({
   duration: 1000,
 });
@@ -17,7 +19,17 @@ const Room = ({ room, fromdate, todate }) => {
     <>
       <div className="row justify-content-center mt-4 bs" data-aos="fade-up">
         <div className="col-md-5 m-2 my-auto">
-          <img src={room.imageurls[2]} alt="Room Pic" className="smallimg" />
+          {/* <img src={room.imageurls[0]} alt="Room Pic" className="smallimg" />
+           */}
+          {room.roomImage ? (
+            <img
+              src={`/uploads1/${room.roomImage}`}
+              alt="roomImage"
+              style={{ width: " 60%" }}
+            />
+          ) : (
+            <img src={img} alt="roomImage" style={{ width: " 60%" }} />
+          )}
         </div>
         <div className="col-md-6 m-2">
           <h3>{room.name}</h3>
@@ -51,17 +63,23 @@ const Room = ({ room, fromdate, todate }) => {
           <Modal.Body>
             <Carousel prevLabel="" nextLabel="">
               {/* prevLabel="" nextLabel="" - added manually */}
-              {room.imageurls.map((url) => {
-                return (
-                  <Carousel.Item>
-                    <img
-                      className="d-block w-100 bigimg"
-                      src={url}
-                      alt="First slide"
-                    />
-                  </Carousel.Item>
-                );
-              })}
+              {room.roomImage ? (
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100 bigimg"
+                    src={`/uploads1/${room.roomImage}`}
+                    alt="First slide"
+                  />
+                </Carousel.Item>
+              ) : (
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100 bigimg"
+                    src={img}
+                    alt="First slide"
+                  />
+                </Carousel.Item>
+              )}
             </Carousel>
             <p>{room.description}</p>
           </Modal.Body>

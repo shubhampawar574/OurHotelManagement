@@ -5,6 +5,17 @@ const multer = require("multer");
 
 const Room = require("../models/room");
 
+const storage = multer.diskStorage({
+  destination: (req, file, callback) => {
+    callback(null, "./client/public/uploads1/");
+  },
+  filename: (req, file, callback) => {
+    callback(null, file.originalname);
+  },
+});
+
+const upload = multer({ storage: storage });
+
 router.get("/getallrooms", async (req, res) => {
   try {
     const rooms = await Room.find({});
@@ -27,9 +38,9 @@ router.post("/getroombyid", async (req, res) => {
   }
 });
 
-router.post("/addroom", async (req, res) => {
+router.post("/addroom", upload.single("roomImage"), async (req, res) => {
   try {
-    const newroom = new Room(req.body);
+    const newroom = new Room({ ...req.body, roomImage: req.file.originalname });
     await newroom.save();
     res.send("New room added successfully");
   } catch (error) {
@@ -47,21 +58,37 @@ router.get("/getallrooms/:id", async (req, res) => {
   }
 });
 
-router.put("/getallrooms/:id", async (req, res) => {
-  try {
-    const editRoom = await Room.findOneAndUpdate(
-      { _id: req.params.id },
-      req.body,
-      { new: true }
-    );
+router.put("/getallrooms/:id", upload.single("roomImage"), async (req, res) => {
+  // try {
+  //   const editRoom = await Room.findOneAndUpdate(
+  //     { _id: req.params.id },
+  //     req.body,
+  //     { new: true }
+  //   );
+  //   if (!editRoom) {
+  //     return res.status(404).json({ message: "Not found" });
+  //   }
+  //   return res.status(200).send({ success: true, post: editRoom });
+  // } catch (err) {
+  //   return res.status(404).json({ message: err });
+  // }
+  Room.findById(req.params.id)
+    .then((room) => {
+      room.name = req.body.name;
+      room.rentperday = req.body.rentperday;
+      room.maxcount = req.body.maxcount;
+      room.phonenumber = req.body.phonenumber;
+      room.description = req.body.description;
+      room.type = req.body.type;
 
-    if (!editRoom) {
-      return res.status(404).json({ message: "Not found" });
-    }
-    return res.status(200).send({ success: true, post: editRoom });
-  } catch (err) {
-    return res.status(404).json({ message: err });
-  }
+      room.roomImage = req.file.originalname;
+
+      room
+        .save()
+        .then(() => res.json("room edited"))
+        .catch((err) => res.status(400).json(`Error: ${err}`));
+    })
+    .catch((err) => res.status(400).json(`Error: ${err}`));
 });
 
 router.delete("/getallrooms/:id", async (req, res) => {

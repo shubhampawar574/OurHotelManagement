@@ -4,6 +4,7 @@ import Room from "../components/Room";
 import "antd/dist/antd.css";
 import { DatePicker, Space } from "antd";
 import moment from "moment";
+import "./Homescreen.css";
 
 const { RangePicker } = DatePicker;
 
@@ -118,7 +119,7 @@ const Homescreen = () => {
       {/* <h1>HOME SCREEN</h1>
       <h3>There are {rooms.length} rooms</h3> */}
       <div className="container">
-        <div className="row mt-4 bs filter">
+        <div className="row mt-4 rooms bs filter">
           <div className="col-md-3 p-1">
             <RangePicker format="DD-MM-YYYY" onChange={filterByDate} />
           </div>
@@ -152,7 +153,7 @@ const Homescreen = () => {
             </select>
           </div>
         </div>
-        <div className="row justify-content-center mt-5">
+        <div className="row justify-content-center rooms ">
           {loading ? (
             <h1>LOADING..</h1>
           ) : error ? (

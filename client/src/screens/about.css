@@ -1,27 +1,26 @@
 .about-image {
-    width: 40vw;
-    height: 40vh;
-  }
-  
-  .about-para {
-    width: 50vw;
-    height: 40vh;
-  }
-  .aboutusback{
-    height: 750px;
-    padding-bottom: 20px;
-  }
-  .about{
-    font-size: 20px;
-    margin: 17px 0px;
-    color: lightgoldenrodyellow;
-    height: 750px;
-    background: url(../resources/gallery_5.jpg);
-    background-size: cover;
+  width: 40vw;
+  height: 40vh;
+}
 
+.about-para {
+  width: 50vw;
+  height: 40vh;
+}
+.aboutusback {
+  height: 750px;
+  padding-bottom: 20px;
+}
+.about {
+  font-size: 20px;
+  margin: 17px 0px;
+  color: lightgoldenrodyellow;
+  height: 750px;
+  background: url(../resources/gallery_5.jpg);
+  background-size: cover;
+}
+@media only screen and (max-width: 1024px) {
+  .about {
+    height: 1000px;
   }
-  @media only screen and (max-width: 1024px) {
-  .about{
-    height: 600px;
-  }
-  }
+}
