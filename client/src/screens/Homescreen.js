@@ -41,8 +41,6 @@ const Homescreen = () => {
   }, []);
 
   const filterByDate = (dates) => {
-    // console.log(moment(dates[0]).format("DD-MM-YYYY"));
-    // console.log(moment(dates[1]).format("DD-MM-YYYY"));
     setfromdate(moment(dates[0]).format("DD-MM-YYYY"));
     settodate(moment(dates[1]).format("DD-MM-YYYY"));
 
@@ -102,9 +100,6 @@ const Homescreen = () => {
   const filterByType = (e) => {
     settype(e);
     if (e != "all") {
-      // const temprooms = duplicaterooms.filter((room) => {
-      //   room.type.toLowerCase() === e.toLowerCase();
-      // });
       const temprooms = duplicaterooms.filter((room) => {
         return room.type.toLowerCase() === e.toLowerCase();
       });

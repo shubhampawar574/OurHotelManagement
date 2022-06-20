@@ -47,21 +47,6 @@ router.get("/getallmeals/:id", async (req, res) => {
 });
 
 router.put("/getallmeals/:id", upload.single("mealImage"), async (req, res) => {
-  // try {
-  //   const editMeal = await Meal.findOneAndUpdate(
-  //     { _id: req.params.id },
-  //     req.body,
-  //     { mealImage: req.file.originalname },
-  //     { new: true }
-  //   );
-
-  //   if (!editMeal) {
-  //     return res.status(404).json({ message: "Not found" });
-  //   }
-  //   return res.status(200).send({ success: true, post: editMeal });
-  // } catch (err) {
-  //   return res.status(404).json({ message: err });
-  // }
   Meal.findById(req.params.id)
     .then((meal) => {
       meal.name = req.body.name;

@@ -318,15 +318,6 @@ export function AddRoom() {
     formData.append("type", type);
 
     formData.append("roomImage", fileName);
-    const newroom = {
-      name,
-      rentperday,
-      maxcount,
-      description,
-      phonenumber,
-      type,
-      roomImage,
-    };
     try {
       setloading(true);
       const result = await (
@@ -708,13 +699,7 @@ export function AddMeal() {
     formData.append("type", type);
     formData.append("cost", cost);
     formData.append("mealImage", fileName);
-    const newmeal = {
-      name,
-      description,
-      type,
-      cost,
-      mealImage,
-    };
+
     try {
       setloading(true);
       const result = await (

@@ -59,19 +59,6 @@ router.get("/getallrooms/:id", async (req, res) => {
 });
 
 router.put("/getallrooms/:id", upload.single("roomImage"), async (req, res) => {
-  // try {
-  //   const editRoom = await Room.findOneAndUpdate(
-  //     { _id: req.params.id },
-  //     req.body,
-  //     { new: true }
-  //   );
-  //   if (!editRoom) {
-  //     return res.status(404).json({ message: "Not found" });
-  //   }
-  //   return res.status(200).send({ success: true, post: editRoom });
-  // } catch (err) {
-  //   return res.status(404).json({ message: err });
-  // }
   Room.findById(req.params.id)
     .then((room) => {
       room.name = req.body.name;
